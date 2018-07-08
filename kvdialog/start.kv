@@ -1,13 +1,22 @@
 #:kivy 1.10.0
 #:import define define
+
 <CStartMenu>:
-    BoxLayout:
-        orientation:'vertical'
-        Button:
-            text:'进入程序'
-            font_name : define.COMMON_FONT
-            on_release : root.on_enter_app()
-        Button:
-            text:'退出程序'
-            font_name : define.COMMON_FONT
-            on_release : root.on_quit_app()
+    canvas:
+        Color:
+            rgba:(1, 1, 1, 0.5)
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    Button:
+        text:'进入程序'
+        font_name : define.COMMON_FONT
+        size_hint: (.25, .15)
+        pos : (root.width/2 - self.size[0]/2., root.height * 6. /10)
+        on_release : root.on_enter_app()
+    Button:
+        text:'退出程序'
+        font_name : define.COMMON_FONT
+        size_hint: (.25, .15)
+        pos : (root.width/2 - self.size[0]/2., root.height * 3. /10)
+        on_release : root.on_quit_app()

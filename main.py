@@ -11,8 +11,7 @@ class CPCExecuteApp(App):
         
         from dialog import startmenu
         oStartMenu = startmenu.CStartMenu(name="startmenu")
-        mgr.switch_to(oStartMenu)
-
+        mgr.add_widget(oStartMenu)
         return mgr
 
 
