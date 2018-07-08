@@ -1,0 +1,49 @@
+#:kivy 1.10.0
+#: import define define
+<CItemLayout>:
+    canvas : 
+        Color :
+            rgba : (1, 1, 1, 0.5)
+        Rectangle:
+            pos : self.pos
+            size : self.size
+    cols : 5
+    size_hint : (.75, 1)
+
+<CEnterMenu>:
+    canvas:
+        Color:
+            rgba:(0, 1., 1., 0.5)
+        Rectangle:
+            pos : self.pos 
+            size : self.size
+    BoxLayout:
+        orientation:'horizontal'
+        spacing : 10
+        CItemLayout:
+            id : 'item_layout'
+        BoxLayout:
+            orientation:'vertical'
+            spacing : 10
+            padding : 5
+            size_hint : (.2, 1)
+            Button:
+                text:'添加'
+                font_name : define.COMMON_FONT
+                on_release : root.on_add_item()
+                size_hint : (.9, .15)
+            Button:
+                text:'删除'
+                font_name : define.COMMON_FONT
+                on_release: root.on_del_item()
+                size_hint : (.9, .15)
+            Button:
+                text:'移动'
+                font_name : define.COMMON_FONT
+                on_release:root.on_move_item()
+                size_hint : (.9, .15)
+            Button:
+                text:'确定'
+                font_name : define.COMMON_FONT
+                on_release: root.on_confirm_item()
+                size_hint : (.9, .15)

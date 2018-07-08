@@ -1,6 +1,7 @@
 #-*- coding:utf-8 -*-
 from kivy.app import App 
 from kivy.uix.screenmanager import ScreenManager
+import define 
 
 class CScreenManager(ScreenManager):
     pass
@@ -10,7 +11,7 @@ class CPCExecuteApp(App):
         mgr = CScreenManager()
         
         from dialog import startmenu
-        oStartMenu = startmenu.CStartMenu(name="startmenu")
+        oStartMenu = startmenu.CStartMenu(name=define.STAR_MENU)
         mgr.add_widget(oStartMenu)
         return mgr
 
