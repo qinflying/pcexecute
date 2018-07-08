@@ -1,11 +1,13 @@
 #:kivy 1.10.0
-
+#:import define define
 <CStartMenu>:
     BoxLayout:
         orientation:'vertical'
         Button:
-            text:'Enter'
+            text:'进入程序'
+            font_name : define.COMMON_FONT
             on_release : root.on_enter_app()
         Button:
-            text:'Quit'
+            text:'退出程序'
+            font_name : define.COMMON_FONT
             on_release : root.on_quit_app()
