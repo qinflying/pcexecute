@@ -1,0 +1,10 @@
+#:kivy 1.10.0
+#:import define define
+
+<CItem>:
+    Label:
+        text:'default cmd'
+    Button:
+        text:'执行'
+        font_name : define.COMMON_FONT 
+        on_release: root.on_item_execute()
