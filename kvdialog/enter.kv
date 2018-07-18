@@ -1,6 +1,6 @@
 #:kivy 1.10.0
-#: import define define
-<CItemLayout>:
+
+<CItemLayout@StackLayout>:
     orientation : 'lr-tb'
     canvas : 
         Color :
@@ -29,23 +29,19 @@
             spacing : 10
             padding : 5
             size_hint : (.2, 1)
-            Button:
+            CFButton:
                 text:'添加'
-                font_name : define.COMMON_FONT
                 on_release : root.on_add_item()
                 size_hint : (1, .1)
-            Button:
+            CFButton:
                 text:'删除'
-                font_name : define.COMMON_FONT
                 on_release: root.on_del_item()
                 size_hint : (1, .1)
-            Button:
+            CFButton:
                 text:'移动'
-                font_name : define.COMMON_FONT
                 on_release:root.on_move_item()
                 size_hint : (1, .1)
-            Button:
+            CFButton:
                 text:'确定'
-                font_name : define.COMMON_FONT
                 on_release: root.on_confirm_item()
                 size_hint : (1, .1)

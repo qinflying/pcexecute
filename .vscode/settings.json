@@ -1,0 +1,28 @@
+{
+    "git.ignoreMissingGitWarning": true,
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "build/" : true,
+        "temp/" : true,
+        "library/" : true,
+        "**/*.anim" : true,
+        "**/*.pyc" : true,
+        "**/*.pyo" : true,
+      },
+
+      "files.exclude": {
+        "**/*.pyc" : true,
+        "**/*.pyo" : true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*meta" : true,
+        "library/" : true,
+        "local/" : true,
+        "temp/" : true
+      },
+}

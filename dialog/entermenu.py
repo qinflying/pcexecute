@@ -2,7 +2,6 @@
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.uix.stacklayout import StackLayout
-from kivy.properties import ListProperty
 
 import item
 

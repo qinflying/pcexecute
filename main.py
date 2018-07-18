@@ -2,6 +2,7 @@
 from kivy.app import App 
 from kivy.uix.screenmanager import ScreenManager
 import define 
+import init 
 
 class CScreenManager(ScreenManager):
     pass
@@ -17,4 +18,6 @@ class CPCExecuteApp(App):
 
 
 if __name__ == "__main__":
+    init.AllInit()
+    
     CPCExecuteApp().run()

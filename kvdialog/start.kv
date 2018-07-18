@@ -1,6 +1,12 @@
 #:kivy 1.10.0
 #:import define define
 
+<CFLabel@Label>:
+    font_name: define.COMMON_FONT
+
+<CFButton@Button>:
+    font_name: define.COMMON_FONT
+
 <CStartMenu>:
     canvas:
         Color:
@@ -8,15 +14,13 @@
         Rectangle:
             pos:self.pos
             size:self.size
-    Button:
+    CFButton:
         text:'进入程序'
-        font_name : define.COMMON_FONT
         size_hint: (.25, .15)
         pos : (root.width/2 - self.size[0]/2., root.height * 6. /10)
         on_release : root.on_enter_app()
-    Button:
+    CFButton:
         text:'退出程序'
-        font_name : define.COMMON_FONT
         size_hint: (.25, .15)
         pos : (root.width/2 - self.size[0]/2., root.height * 3. /10)
         on_release : root.on_quit_app()
